@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id ='control'>
+    <button v-on:click='hello'>点我</button>
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script type="text/javascript">
+
+    var con = new Vue({
+        el: '#control',
+        data: {
+            message: 'java-Web'
+        },
+        methods:{
+            hello: function (event) {
+                alert(this.message);
+            }
+        }
+    });
+</script>
+</html>

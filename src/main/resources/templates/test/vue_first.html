@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+    <div id = "app">
+         {{message}}
+        <span v-bind:title = 'message'>
+            鼠标悬停
+        </span>
+     </div>
+
+    <div id = 'control'>
+        <h1>判断控制</h1>
+        <h1 v-if="type === A">A</h1>
+        <h1 v-else-if="type === A">B</h1>
+        <h1 v-else>C</h1>
+    </div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue'
+        }
+    });
+
+    var con = new Vue({
+        el: '#control',
+        type: 'C'
+    });
+</script>
+</html>

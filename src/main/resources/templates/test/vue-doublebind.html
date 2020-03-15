@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id ='control'>
+    输入文本<input type="text" v-model="message">{{message}}
+
+    <input type="radio" name="sex" value="男" v-model="sex_m"> 男
+    <input type="radio" name="sex" value="女" v-model="sex_m"> 女
+    {{sex_m}}
+
+   <p>
+       <select v-model = "selected">
+           <option value="" disabled>--请选择--</option>
+           <option>A</option>
+           <option>B</option>
+           <option>C</option>
+           <option>D</option>
+       </select>
+   </p>
+
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script type="text/javascript">
+
+    var con = new Vue({
+        el: '#control',
+        data: {
+            message: 'java-Web',
+            sex_m: '女',
+            selected: ""
+        },
+        methods:{
+            hello: function (event) {
+                alert(this.message);
+            }
+        }
+    });
+</script>
+</html>
